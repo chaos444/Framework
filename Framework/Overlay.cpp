@@ -28,8 +28,8 @@ void OverlayFunctions::CreateClass(WNDPROC winproc, char * windowname)
 
 void OverlayFunctions::GetTargetWindow()
 {
-	Target.Window = FindWindow(0, "Recycle Bin");
-	Target.Name == "Recycle Bin";
+	Target.Window = FindWindow(0, "Counter-Strike: Global Offensive");
+	Target.Name == "Counter-Strike: Global Offensive";
 
 	if (Target.Window)
 	{  

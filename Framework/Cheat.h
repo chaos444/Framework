@@ -15,12 +15,28 @@
 #include <dwmapi.h>
 #pragma comment(lib, "dwmapi.lib")
 
-class TestClass
+
+#define OFFSET_LOCALPLAYER 0xA7AFAC
+#define OFFSET_ENTITYLIST 0x4A1D384
+
+
+class LocalPlayer
 {
-public :
-	int TestInt; 
+public:
+	int clientPlayer;
+	int incrossid;
+	int teamid;
+	int health;
+
 };
 
-void Test(TestClass* TestClass1);
+
+class InCrosshair : public LocalPlayer
+{
+public:
+
+};
+
+void Yarin(LocalPlayer* lPlayer, InCrosshair* InCH);
 
 #endif

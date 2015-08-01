@@ -4,15 +4,18 @@
 
 directx_t DirectX;
 MenuManager mMenuManager;
-TestClass* TestClass1;
+LocalPlayer lPlayer;
+InCrosshair InCH;
 
 bool crosshair = true;
+bool trigger = true;
 
 
 void DirectxFunctions::MenuItems()
 {
 	Menu* menu1 = mMenuManager.createMenu(150, 300, 170, "Meher Framework ", true, Color::White, Color::White, Color::Red);
    menu1->addItem(&crosshair, TEXT("Crosshair"), ITEM_TYPES::ITEM_BOOL);
+   menu1->addItem(&trigger, TEXT("Trigger Bot"), ITEM_TYPES::ITEM_BOOL);
 }
 
 
@@ -59,7 +62,12 @@ void DirectxFunctions::RenderDirectX()
 			Drawing::Line(centerx, centery + 3, centerx, centery + 10, Color::Red);
 		}
 
-		Test(TestClass1);
+		if (trigger == true)
+		{
+			Yarin(&lPlayer, &InCH);
+		}
+		
+	
 	}
 
 
